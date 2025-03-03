@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6a0dad; /* Warna ungu tua */
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            background-color: #d8bfd8; /* Warna ungu muda */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin: 1rem 0;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+
+        .section {
+            background: #8a2be2; /* Warna ungu */
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: white; /* Warna teks putih */
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .about-text {
+            text-align: justify;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .info-label {
+            font-weight: bold;
+            min-width: 120px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .education-year, .experience-year {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+
+        .education-degree, .experience-position {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .education-school, .experience-company {
+            margin-bottom: 5px;
+        }
+
+        .contact-button {
+            background-color: white;
+            color: #6a0dad;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        .contact-button:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-name {
+                font-size: 2rem;
+            }
+            
+            .info-item {
+                flex-direction: column;
+            }
+            
+            .info-label {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-container">
+                <div class="profile-img">
+                    <!-- Ganti dengan tag img untuk foto Anda atau biarkan inisial -->
+                    <span>NS</span>
+                </div>
+                <h1 class="profile-name">Nama Saya</h1>
+                <p class="profile-title">Posisi / Profesi</p>
+                <div class="social-icons">
+                    <!-- Ganti dengan URL media sosial Anda -->
+                    <a href="#" class="social-icon">📱</a>
+                    <a href="#" class="social-icon">✉️</a>
+                    <a href="#" class="social-icon">👥</a>
+                    <a href="#" class="social-icon">📸</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p class="about-text">
+                Halo! Saya adalah seseorang mahasiswa Ilmu Komputer
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Informasi Pribadi</h2>
+            <div class="info-item">
+                <div class="info-label">Nama Lengkap: Muhammad Rafli Arifin</div>
+                <div class="info-value">Muhammad Rafli Arifin</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Tanggal Lahir: 23 Januari 2006</div>
+                <div class="info-value">23 Januari 2006</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Email:</div>
+                <div class="info-value">email@contoh.com</div>
+            </div>         
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Keahlian</h2>
+            <div class="skills-container">
+                <div class="skill-item">Bermain Game </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="education-item">
+                <div class="education-year">2023 - Sekarang</div>
+                <div class="education-degree">Ilmu Komputer</div>
+                <div class="education-school">UHO</div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title">Kontak</h2>
+            <p>Jika Anda tertarik untuk berkolaborasi atau memiliki pertanyaan, jangan ragu untuk menghubungi saya.</p>
+            <a href="mailto:email@contoh.com" class="contact-button">Kirim Email</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Muhammad Rafli.</p>
+    </footer>
+</body>
+</html>
