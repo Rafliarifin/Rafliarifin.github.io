@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Saya</title>
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -52,11 +54,18 @@
             font-size: 3rem;
             margin-bottom: 1.5rem;
             overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
         }
 
         .profile-name {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .profile-title {
@@ -64,6 +73,9 @@
             font-weight: 300;
             margin-bottom: 1rem;
             opacity: 0.8;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
         }
 
         .social-icons {
@@ -76,11 +88,19 @@
             font-size: 1.5rem;
             color: white;
             text-decoration: none;
-            transition: transform 0.3s;
+            transition: transform 0.3s, color 0.3s;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .social-icon:hover {
             transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         main {
@@ -96,6 +116,12 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: white; /* Warna teks putih */
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         .section-title {
@@ -103,10 +129,17 @@
             margin-bottom: 1rem;
             border-bottom: 2px solid rgba(255, 255, 255, 0.3);
             padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
         }
 
         .about-text {
             text-align: justify;
+            line-height: 1.8;
         }
 
         .info-item {
@@ -130,10 +163,23 @@
             background-color: rgba(255, 255, 255, 0.2);
             padding: 8px 15px;
             border-radius: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .skill-item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
         }
 
         .education-item, .experience-item {
             margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid rgba(255, 255, 255, 0.3);
+            transition: border-left 0.3s;
+        }
+
+        .education-item:hover, .experience-item:hover {
+            border-left: 3px solid rgba(255, 255, 255, 0.8);
         }
 
         .education-year, .experience-year {
@@ -169,6 +215,7 @@
         .contact-button:hover {
             background-color: #f0f0f0;
             transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -177,6 +224,57 @@
             text-align: center;
             padding: 1.5rem 0;
             margin-top: 2rem;
+        }
+
+        /* Quote Generator Styles */
+        .quote-section {
+            background: linear-gradient(135deg, #9370DB, #6a0dad);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            color: white;
+            text-align: center;
+        }
+
+        .quote-container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .quote-text {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-weight: bold;
+            text-align: right;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .quote-button {
+            background-color: white;
+            color: #6a0dad;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .quote-button:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 600px) {
@@ -196,6 +294,10 @@
             .info-label {
                 margin-bottom: 5px;
             }
+            
+            .quote-text {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -204,17 +306,14 @@
         <div class="header-content">
             <div class="profile-container">
                 <div class="profile-img">
-                    <!-- Ganti dengan tag img untuk foto Anda atau biarkan inisial -->
                     <span>RA</span>
                 </div>
                 <h1 class="profile-name">Muhammad Rafli Arifin</h1>
                 <p class="profile-title">Mahasiswa</p>
                 <div class="social-icons">
-                    <!-- Ganti dengan URL media sosial Anda -->
-                    <a href="#" class="social-icon">📱</a>
-                    <a href="#" class="social-icon">✉️</a>
-                    <a href="#" class="social-icon">👥</a>
-                    <a href="#" class="social-icon">📸</a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -222,14 +321,14 @@
 
     <main>
         <section class="section">
-            <h2 class="section-title">Tentang Saya</h2>
+            <h2 class="section-title"><i class="fas fa-user"></i> Tentang Saya</h2>
             <p class="about-text">
-                Halo! Saya adalah seseorang mahasiswa Ilmu Komputer
+                Halo! Saya adalah seorang mahasiswa Ilmu Komputer yang bersemangat dalam mempelajari teknologi dan pengembangan perangkat lunak. Saya senang mengeksplorasi berbagai bahasa pemrograman dan teknologi web modern.
             </p>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Informasi Pribadi</h2>
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Informasi Pribadi</h2>
             <div class="info-item">
                 <div class="info-label">Nama Lengkap:</div>
                 <div class="info-value">Muhammad Rafli Arifin</div>
@@ -245,31 +344,39 @@
         </section>
 
         <section class="section">
-            <h2 class="section-title">Keahlian</h2>
+            <h2 class="section-title"><i class="fas fa-code"></i> Keahlian</h2>
             <div class="skills-container">
-                <div class="skill-item">Bermain Game </div>
+                <div class="skill-item">Bermain Game</div>
                 <div class="skill-item">Belajar</div>
                 <div class="skill-item">Tidur</div>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Pendidikan</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
             <div class="education-item">
                 <div class="education-year">2023 - Sekarang</div>
                 <div class="education-degree">Ilmu Komputer</div>
                 <div class="education-school">Universitas Halu Oleo</div>
             </div>
         </section>
-        <!-- <section class="section">
-            <h2 class="section-title">Kontak</h2>
-            <p>Jika Anda tertarik untuk berkolaborasi atau memiliki pertanyaan, jangan ragu untuk menghubungi saya.</p>
-            <a href="mailto:email@contoh.com" class="contact-button">Kirim Email</a>
-        </section> -->
+
+        <!-- Random Quote Generator Section -->
+        <section class="quote-section">
+            <h2 class="section-title"><i class="fas fa-quote-left"></i> Random Quote Generator</h2>
+            <div class="quote-container">
+                <p class="quote-text" id="quote"></p>
+                
+            </div>
+            <button class="quote-button" id="new-quote" onclick="quoteGenerator()">Generate Quote</button>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Muhammad Rafli.</p>
     </footer>
+
+    <!-- Script untuk menghubungkan dengan file JS Anda -->
+    <script src="script.js"></script>
 </body>
 </html>
