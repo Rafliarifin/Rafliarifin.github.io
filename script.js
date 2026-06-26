@@ -77,22 +77,29 @@ function updateActiveNavLink() {
 // ── SCROLL REVEAL ANIMATION ──
 const revealElements = document.querySelectorAll('.reveal');
 
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            // Stagger animation for multiple elements
-            setTimeout(() => {
+if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-            }, index * 100);
-            revealObserver.unobserve(entry.target);
-        }
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px 0px 0px'
     });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-});
 
-revealElements.forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => revealObserver.observe(el));
+} else {
+    // Fallback: if IntersectionObserver not supported, show all
+    revealElements.forEach(el => el.classList.add('visible'));
+}
+
+// Fallback: ensure all elements become visible after 3 seconds regardless
+setTimeout(() => {
+    revealElements.forEach(el => el.classList.add('visible'));
+}, 3000);
 
 // ── SKILL BARS ANIMATION ──
 const skillBars = document.querySelectorAll('.skill-bar-fill');
