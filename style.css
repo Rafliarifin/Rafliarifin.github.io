@@ -858,6 +858,13 @@ body {
   height: auto;
 }
 
+.semantic-table {
+  width: 100%;
+  overflow-x: auto; /* Memastikan tabel bisa di-scroll horizontal di HP */
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-glass);
+}
+
 .spo-table {
   max-width: 800px;
   margin: 0 auto;
@@ -865,8 +872,6 @@ body {
   border-collapse: separate;
   border-spacing: 0;
   overflow: hidden;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-glass);
 }
 
 .spo-table thead th {
@@ -1189,6 +1194,16 @@ body {
 
   .stat-value {
     font-size: 1.1rem;
+  }
+
+  .semantic-graph {
+    padding: 20px 10px; /* Kurangi padding di HP agar graf lebih besar */
+  }
+
+  .spo-table thead th,
+  .spo-table tbody td {
+    padding: 8px 10px;
+    font-size: 0.75rem;
   }
 
   .quote-card {
