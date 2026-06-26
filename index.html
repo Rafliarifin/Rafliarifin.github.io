@@ -31,7 +31,6 @@
         "@graph": [
             {
                 "@type": "Person",
-                "@id": "https://rafliarifin.github.io/#person",
                 "name": "Muhammad Rafli Arifin",
                 "givenName": "Muhammad Rafli",
                 "familyName": "Arifin",
@@ -47,7 +46,8 @@
                 },
                 "alumniOf": [
                     {
-                        "@id": "https://rafliarifin.github.io/#uho"
+                        "@type": "CollegeOrUniversity",
+                        "name": "Universitas Halu Oleo"
                     },
                     {
                         "@type": "EducationalOrganization",
@@ -70,25 +70,21 @@
                 "knowsAbout": [
                     {
                         "@type": "DefinedTerm",
-                        "@id": "https://rafliarifin.github.io/#skill-linux",
                         "name": "Linux System Administration",
                         "description": "Administrasi sistem Linux, manajemen server, dan konfigurasi VPS"
                     },
                     {
                         "@type": "DefinedTerm",
-                        "@id": "https://rafliarifin.github.io/#skill-server",
                         "name": "Server & VPS Deployment",
                         "description": "Deployment aplikasi pada Virtual Private Server (AWS EC2, Ubuntu Server)"
                     },
                     {
                         "@type": "DefinedTerm",
-                        "@id": "https://rafliarifin.github.io/#skill-flask",
                         "name": "Python & Flask",
                         "description": "Pengembangan web application menggunakan Python dan framework Flask"
                     },
                     {
                         "@type": "DefinedTerm",
-                        "@id": "https://rafliarifin.github.io/#skill-webdev",
                         "name": "HTML & CSS",
                         "description": "Pengembangan frontend website menggunakan HTML dan CSS"
                     },
@@ -104,14 +100,14 @@
                 "memberOf": [
                     {
                         "@type": "Organization",
-                        "@id": "https://rafliarifin.github.io/#org-hmps",
                         "name": "HMPS Ilmu Komputer",
                         "department": {
                             "@type": "Organization",
                             "name": "Bidang Minat dan Bakat"
                         },
                         "parentOrganization": {
-                            "@id": "https://rafliarifin.github.io/#uho"
+                            "@type": "CollegeOrUniversity",
+                            "name": "Universitas Halu Oleo"
                         }
                     }
                 ],
@@ -123,7 +119,6 @@
             },
             {
                 "@type": "CollegeOrUniversity",
-                "@id": "https://rafliarifin.github.io/#uho",
                 "name": "Universitas Halu Oleo",
                 "alternateName": "UHO",
                 "url": "https://uho.ac.id",
@@ -147,35 +142,35 @@
             },
             {
                 "@type": "SoftwareApplication",
-                "@id": "https://rafliarifin.github.io/#project-arsip",
                 "name": "Aplikasi Layanan Elektronik Arsip Digital",
                 "description": "Aplikasi desktop berbasis Python dan PyQt6 untuk manajemen surat masuk, surat keluar, dan pengelolaan dokumen arsip digital di DPMPTSP Kota Kendari.",
                 "applicationCategory": "BusinessApplication",
                 "author": {
-                    "@id": "https://rafliarifin.github.io/#person"
+                    "@type": "Person",
+                    "name": "Muhammad Rafli Arifin"
                 },
                 "operatingSystem": "Windows, Linux",
                 "programmingLanguage": "Python"
             },
             {
                 "@type": "SoftwareApplication",
-                "@id": "https://rafliarifin.github.io/#project-chessfolio",
                 "name": "Chessfolio",
                 "description": "Platform profil pemain catur online yang menampilkan data statistik secara real-time. Dibangun dengan Flask dan di-deploy pada AWS EC2 Ubuntu Server, mengintegrasikan REST API publik Chess.com.",
                 "applicationCategory": "WebApplication",
                 "author": {
-                    "@id": "https://rafliarifin.github.io/#person"
+                    "@type": "Person",
+                    "name": "Muhammad Rafli Arifin"
                 },
                 "operatingSystem": "Web-based (AWS EC2 Ubuntu Server)",
                 "programmingLanguage": "Python"
             },
             {
                 "@type": "CreativeWork",
-                "@id": "https://rafliarifin.github.io/#project-segmentasi",
                 "name": "Segmentasi Profil Pasien Berdasarkan Pola Gejala Klinis dan Data Demografis",
                 "description": "Proyek machine learning yang menggunakan teknik clustering untuk mengelompokkan profil pasien UGD berdasarkan tingkat keparahan guna mendukung prioritas penanganan medis.",
                 "author": {
-                    "@id": "https://rafliarifin.github.io/#person"
+                    "@type": "Person",
+                    "name": "Muhammad Rafli Arifin"
                 },
                 "genre": "Machine Learning"
             },
@@ -184,7 +179,8 @@
                 "name": "Profil Semantik Muhammad Rafli Arifin",
                 "url": "https://rafliarifin.github.io",
                 "author": {
-                    "@id": "https://rafliarifin.github.io/#person"
+                    "@type": "Person",
+                    "name": "Muhammad Rafli Arifin"
                 },
                 "description": "Website profil pribadi dengan implementasi Semantic Web menggunakan Schema.org JSON-LD"
             }
